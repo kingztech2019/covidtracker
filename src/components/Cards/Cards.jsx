@@ -3,7 +3,7 @@ import {Card, CardContent, Typography, Grid} from '@material-ui/core';
 import styles from './Cards.module.css';
 import CountUp from 'react-countup';
 import cx from 'classnames';
-import { Offline, Online } from "react-detect-offline";
+ 
 const Cards = ({data:{confirmed, recovered, deaths, lastUpdate}}) => {
     if(!confirmed){
         return 'Loading...';
@@ -12,7 +12,7 @@ const Cards = ({data:{confirmed, recovered, deaths, lastUpdate}}) => {
      
     return (
         <div className={styles.container}>
-             <Offline>Only shown offline (surprise!)</Offline>
+             
             <Grid container spacing={3} justify="center">
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.infected)}>
                     <CardContent>
